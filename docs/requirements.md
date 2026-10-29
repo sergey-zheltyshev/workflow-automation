@@ -7,6 +7,7 @@
 | WA-03 | Reject semantic review before a full source revision exists | `test_semantic_apply_resolves_unknown_and_builds_system_queue` |
 | WA-04 | Recover batch progress without duplicating the work | `test_semantic_batch_start_next_commit_resume_finish` |
 | WA-05 | Keep reader capabilities separate from mutation interfaces | `test_reader_public_methods_have_no_action_or_submit_surface` |
+| WA-06 | Do not rewrite an already-current database schema during ordinary reads | `test_current_schema_is_not_rewritten_on_every_read` |
 
 ## Acceptance walkthrough
 

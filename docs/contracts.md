@@ -24,4 +24,6 @@ The public scenario exercises local orchestration. Browser adapters remain a sep
 
 ## Operational separation
 
+Schema migration 21 installs the current evidence-gated queue. Subsequent reads check the version and leave the schema unchanged; a newer, unsupported schema is rejected rather than silently modified.
+
 The default demo and test commands require no applicant account. Live adapters are deliberately outside the demonstration path. Runtime databases, browser profiles, outgoing messages and captured account material are ignored by Git.

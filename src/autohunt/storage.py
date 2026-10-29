@@ -648,6 +648,15 @@ def backfill_vacancy_descriptions(database: Path, work_items_dir: Path) -> dict[
 def migrate(path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with closing(sqlite3.connect(path)) as db, db:
+        # A normal read must not replay historical DDL and rewrite views.
+        # Version 21 marks installation of the final evidence-gated queue.
+        has_history = db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='schema_migrations'").fetchone()
+        if has_history:
+            current = db.execute("SELECT MAX(version) FROM schema_migrations").fetchone()[0]
+            if current is not None and current > 21:
+                raise RuntimeError("Database schema is newer than this runtime")
+            if current == 21:
+                return
         db.executescript(SCHEMA)
         db.execute("INSERT OR IGNORE INTO schema_migrations(version) VALUES (1)")
         db.executescript(SCHEMA_V2)
@@ -724,3 +733,4 @@ def migrate(path: Path) -> None:
         # gate for already-migrated production databases too.
         db.execute("DROP VIEW IF EXISTS candidate_action_queue")
         db.executescript(SCHEMA_V18)
+        db.execute("INSERT OR IGNORE INTO schema_migrations(version) VALUES (21)")

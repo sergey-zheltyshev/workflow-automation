@@ -22,9 +22,20 @@ def test_migrate_is_idempotent_and_installs_sync_tables(tmp_path: Path):
         versions = db.execute("SELECT version FROM schema_migrations ORDER BY version").fetchall()
         tables = {row[0] for row in db.execute("SELECT name FROM sqlite_master WHERE type='table'")}
         views = {row[0] for row in db.execute("SELECT name FROM sqlite_master WHERE type='view'")}
-    assert versions == [(1,), (2,), (3,), (4,), (5,), (6,), (7,), (8,), (9,), (10,), (11,), (12,), (13,), (14,), (15,), (16,), (17,), (18,), (19,), (20,)]
+    assert versions == [(version,) for version in range(1, 22)]
     assert {"search_runs", "search_results", "negotiations", "messages", "chat_vacancy_links", "snapshots", "external_items", "user_questions", "candidate_decision_evidence"} <= tables
     assert {"candidate_vacancy_review", "application_review", "chat_review", "candidate_funnel", "candidate_action_queue", "candidate_operator_funnel"} <= views
+
+
+def test_current_schema_is_not_rewritten_on_every_read(tmp_path: Path):
+    database = tmp_path / 'migration-fast-path.sqlite'
+    migrate(database)
+    with sqlite3.connect(database) as db:
+        before = db.execute('PRAGMA schema_version').fetchone()[0]
+    migrate(database)
+    with sqlite3.connect(database) as db:
+        after = db.execute('PRAGMA schema_version').fetchone()[0]
+    assert after == before
 
 
 def test_sync_is_idempotent_and_unlinked_chat_is_error():
