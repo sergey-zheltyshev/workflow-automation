@@ -35,7 +35,7 @@ def run(out):
             snapshot=[dict(zip(['name','value'],row)) for row in db.execute('SELECT name,value_json FROM candidate_checkpoints')]
         report={'scenario':'synthetic-offline','records_read':3,'state_after_restart':recovered['runs'][0]['status'],'action_count':0,'checkpoints':checkpoints,'durable_checkpoints':snapshot}
     (out/'workflow.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
-    print('READ → REVIEW → blocked unapproved action → recovered review state.')
+    print('READ -> REVIEW -> blocked unapproved action -> recovered review state.')
     print(f'Output: {out/"workflow.json"}')
     return report
 
