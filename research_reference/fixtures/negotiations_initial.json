@@ -1,0 +1,25 @@
+{
+  "url": "https://hh.ru/applicant/negotiations",
+  "actions": [
+    {
+      "qa": "tab_filter_all",
+      "text": "51"
+    },
+    {
+      "qa": "tab_filter_interview",
+      "text": "8"
+    },
+    {
+      "qa": "tab_filter_awaiting",
+      "text": "15"
+    },
+    {
+      "qa": "tab_filter_discard",
+      "text": "28"
+    },
+    {
+      "qa": "negotiations-item",
+      "text": "Synthetic record"
+    }
+  ]
+}

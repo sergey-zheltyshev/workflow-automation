@@ -1,0 +1,37 @@
+{
+  "data_class": "synthetic",
+  "fixtures": [
+    {
+      "local": "fixtures/advanced_search_drawer.json",
+      "sha256": "95228313E16CE85E14D1E5FE29BA454572086BF453699011B0D32C5328D54328"
+    },
+    {
+      "local": "fixtures/chatik_priority_queue.json",
+      "sha256": "E7433E78A2A449E72719C254CE8D13009FB515D37E089D5E626DEC310A91FE9B"
+    },
+    {
+      "local": "fixtures/corrupted_input_employer_answers.json",
+      "sha256": "F03355F27AF56804A623D0A5167D833994646EE87379DBD0D28083BE1EA4D9D4"
+    },
+    {
+      "local": "fixtures/negotiations_initial.json",
+      "sha256": "AAE62A4671FE716DBD8EF45C4A801A1F6C8052B5C3BF19A0E118DEB5E1E67834"
+    },
+    {
+      "local": "fixtures/ordinary_chat.txt",
+      "sha256": "25107942D905858E6E01DFD033F0CFABDD21198DE2D41D34F40D800E651277DD"
+    },
+    {
+      "local": "fixtures/post_application_cover.json",
+      "sha256": "7338440BE408D8539B8D79F81A59B4EB1DC3385F4166081A84C312510943BFB1"
+    },
+    {
+      "local": "fixtures/required_cover_letter.json",
+      "sha256": "E152363D97010A947031CD296E6B22AB0BD723A08F12D3E935230E1617D401A4"
+    },
+    {
+      "local": "fixtures/vacancy_map_initial.json",
+      "sha256": "0160A4C2353899965D2E37CB953347499D18EFA911437FD5D27BA67D9BC212B6"
+    }
+  ]
+}

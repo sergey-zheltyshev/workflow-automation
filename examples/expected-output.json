@@ -1,0 +1,26 @@
+{
+  "scenario": "synthetic-offline",
+  "records_read": 3,
+  "state_after_restart": "awaiting_semantic",
+  "action_count": 0,
+  "checkpoints": [
+    {
+      "phase": "READ_RUNNING",
+      "meaning": "Collect full source records before review"
+    },
+    {
+      "phase": "SEMANTIC_PENDING",
+      "meaning": "Durable review handoff; no browser session held open"
+    },
+    {
+      "phase": "ACTION_BLOCKED",
+      "meaning": "no evidence-gated applications ready"
+    }
+  ],
+  "durable_checkpoints": [
+    {
+      "name": "business_batch",
+      "value": "{\"run_id\": \"business-read:75da3151-3c22-46c8-9a20-8a4f8fad6097\", \"stage\": \"SEMANTIC_PENDING\", \"full_read\": 3, \"incidents\": 0}"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "rows": [
+    {
+      "chat_id": "800000",
+      "title": "Synthetic employer 0",
+      "categories": [
+        "external_form"
+      ]
+    },
+    {
+      "chat_id": "800001",
+      "title": "Synthetic employer 1",
+      "categories": []
+    },
+    {
+      "chat_id": "800002",
+      "title": "Synthetic employer 2",
+      "categories": []
+    },
+    {
+      "chat_id": "800003",
+      "title": "Synthetic employer 3",
+      "categories": []
+    },
+    {
+      "chat_id": "800004",
+      "title": "Synthetic employer 4",
+      "categories": []
+    },
+    {
+      "chat_id": "800005",
+      "title": "Synthetic employer 5",
+      "categories": []
+    },
+    {
+      "chat_id": "800006",
+      "title": "Synthetic employer 6",
+      "categories": []
+    },
+    {
+      "chat_id": "800007",
+      "title": "Synthetic employer 7",
+      "categories": []
+    },
+    {
+      "chat_id": "800008",
+      "title": "Synthetic employer 8",
+      "categories": []
+    },
+    {
+      "chat_id": "800009",
+      "title": "Synthetic employer 9",
+      "categories": []
+    },
+    {
+      "chat_id": "800010",
+      "title": "Synthetic employer 10",
+      "categories": []
+    },
+    {
+      "chat_id": "800011",
+      "title": "Synthetic employer 11",
+      "categories": []
+    }
+  ]
+}

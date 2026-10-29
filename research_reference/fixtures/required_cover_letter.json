@@ -1,0 +1,9 @@
+{
+  "textarea": {
+    "required": false
+  },
+  "submit": {
+    "disabled": false
+  },
+  "dialog_text": "10000 characters"
+}

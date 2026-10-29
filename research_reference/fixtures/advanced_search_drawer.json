@@ -1,0 +1,45 @@
+{
+  "text": "Фильтры",
+  "controls": [
+    {
+      "name": "text",
+      "value": "business-analyst"
+    },
+    {
+      "name": "filter-0"
+    },
+    {
+      "name": "filter-1"
+    },
+    {
+      "name": "filter-2"
+    },
+    {
+      "name": "filter-3"
+    },
+    {
+      "name": "filter-4"
+    },
+    {
+      "name": "filter-5"
+    },
+    {
+      "name": "filter-6"
+    },
+    {
+      "name": "filter-7"
+    },
+    {
+      "name": "filter-8"
+    },
+    {
+      "name": "filter-9"
+    },
+    {
+      "name": "filter-10"
+    },
+    {
+      "name": "filter-11"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+# Local credentials and runtime state
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.sqlite
+*.sqlite3
+*.db
+*.log
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+node_modules/
+build/
+dist/
+var/
+output/
+logs/
+/data/
+!.github/
+
+.qa*/
+*.egg-info/
